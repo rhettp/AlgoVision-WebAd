@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<style>
+    body {
+        background-color: lightslategray;
+        font-size: 30px;
+        color: whitesmoke;
+        font-family: "Gill Sans", sans-serif;
+    }
+    
+    h1 {
+        margin-top: 15%;
+        font-weight: bold;
+    }
+
+    #google {
+        height: 100px;
+    }
+
+    #left {
+        float: left;
+        margin-left: 16%;
+        margin-top: 7%;
+    }
+
+    #right {
+        margin-top: 2%;
+    }
+
+    #image {
+        margin-left: 60%;
+    }
+
+    #change {
+        height: 90vh;
+    }
+
+    #arrow {
+        height: 13vh;
+        margin-bottom: 55%;
+        margin-left: 2%;
+    }
+
+</style>
+<body>
+    <div id="left">
+        <h1>AlgoVision</h1>
+        <h3>
+            AlgoVision makes it easy to learn and visualize<br>
+            common sorting and pathfinding algorithms.<br>
+            The algorithms include insertion sort, bubble sort,<br>
+            Depth-First Search, Dijkstra’s, and more!
+        </h3>
+        <img id="google" src="google-play-badge.png">
+    </div>
+    <div id="right">
+        <div id="image">
+            <img id="change" src="main.png">
+            <img id="arrow" src="arrow.webp" onclick="changeImage()">
+        </div>
+        
+    </div>
+</body>
+</html>
+<script>
+    var image = document.getElementById("change");
+    
+    function changeImage() {
+        console.log("click");
+        if (image.src.match("main.png")){
+            image.src = "sort.png";
+        } else if (image.src.match("sort.png")) {
+            image.src = "description.png";
+        } else {
+            image.src = "main.png";
+        }
+    }
+</script>
